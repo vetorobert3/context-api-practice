@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Movie = () => {
+const Movie = ({ name, price, id }) => {
 
   return (
     <div>
-      <h3></h3>
+      <h3>{name}</h3>
+  <p>{price}</p>
     </div>
-
   );
 }
 
