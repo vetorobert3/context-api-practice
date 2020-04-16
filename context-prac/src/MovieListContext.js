@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 
 export const MovieListContext = createContext();
 
-export const MovieProvider = () => {
+export const MovieListProvider = (props) => {
 
   const [movies, setMovies] = useState([
     {
@@ -23,6 +23,8 @@ export const MovieProvider = () => {
   ]);
 
   return (
-
+    <MovieListContext.Provider value={[movies, setMovies]}>
+      {props.children}
+    </MovieListContext.Provider>
   );
 }

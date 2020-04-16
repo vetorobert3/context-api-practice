@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Movie from './Movie';
+import { MovieListContext } from './MovieListContext';
 
 const MovieList = () => {
+
+  const [movies, setMovies] = useContext(MovieListContext);
 
   return (
     <div>
@@ -10,7 +13,6 @@ const MovieList = () => {
         <Movie name={movie.name} price={movie.price} key={movie.id} />
       ))}
     </div>
-
   );
 }
 
